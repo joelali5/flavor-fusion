@@ -1,3 +1,9 @@
-export default function App(){
-  return <h1 className='text-red-500 text-lg'>This Application is working so far</h1>
+import AppLayout from "./ui/AppLayout";
+
+export default function App() {
+  return (
+    <div className="text-red-500 h-dvh flex justify-center items-center">
+      <AppLayout />
+    </div>
+  );
 }
