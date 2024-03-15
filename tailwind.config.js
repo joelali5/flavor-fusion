@@ -16,6 +16,7 @@ export default {
       },
       fontFamily: {
         kanit: "Kanit, sans-serif",
+        rubik: "Rubik Glitch Pop, system-ui",
       },
     },
   },

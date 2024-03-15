@@ -8,9 +8,9 @@ import { FaBowlFood } from "react-icons/fa6";
 function SideBar() {
   return (
     <div className="col-start-1 col-end-2 sm:col-start-1 sm:col-end-3 row-start-1 row-end-3 flex flex-col gap-10 py-5 ml-5 sm:ml-10 text-black">
-      <div>
-        <h1>Logo</h1>
-      </div>
+      <p className="text-lg sm:text-xl font-bold font-rubik">
+        <span>Flavor</span>
+      </p>
       <div className="flex flex-col gap-5">
         <h4 className="text-grey text-xs sm:text-sm font-kanit uppercase hidden sm:block">
           Discover
