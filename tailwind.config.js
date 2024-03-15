@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        layoutGridColumns: "150px 1fr",
+        layoutGridColumns: "60px 90px 1fr",
       },
       gridTemplateRows: {
         layoutGridRows: "70px auto",
       },
       colors: {
         black: "#101101",
-        "grey": "#D9D9D7",
+        grey: "#D9D9D7",
       },
       fontFamily: {
         kanit: "Kanit, sans-serif",
