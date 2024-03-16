@@ -17,18 +17,20 @@ function SideBar() {
         </h4>
         <div className="flex gap-3 items-center">
           <MdOutlineHome />
-          <p className="hidden sm:block">Home</p>
+          <p className="hidden sm:block font-kanit text-black-2">Home</p>
         </div>
         <div className="flex gap-3 items-center">
           <IoSearch />
-          <p className="hidden sm:block">Browse</p>
+          <p className="hidden sm:block font-kanit text-black-2">Browse</p>
         </div>
         <div className="flex gap-2 items-center">
           <div className="flex gap-3 items-center">
             <span>
               <FaHeart />
             </span>
-            <span className="hidden sm:block">For you</span>
+            <span className="hidden sm:block font-kanit text-black-2">
+              For you
+            </span>
           </div>
         </div>
       </div>
@@ -38,18 +40,20 @@ function SideBar() {
         </h4>
         <div className="flex gap-3 items-center">
           <GiChefToque />
-          <p className="hidden sm:block">Chefs</p>
+          <p className="hidden sm:block font-kanit text-black-2">Chefs</p>
         </div>
         <div className="flex gap-3 items-center">
           <FaStar />
-          <p className="hidden sm:block">Favorites</p>
+          <p className="hidden sm:block font-kanit text-black-2">Favorites</p>
         </div>
         <div className="flex gap-2 items-center">
           <div className="flex gap-3 items-center">
             <span>
               <FaBowlFood />
             </span>
-            <span className="hidden sm:block">Recipes</span>
+            <span className="hidden sm:block font-kanit text-black-2">
+              Recipes
+            </span>
           </div>
         </div>
       </div>

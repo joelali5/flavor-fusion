@@ -1,9 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
+import Recipes from "./pages/Recipes";
 
 export default function App() {
   return (
-    <div className="text-red-500 h-dvh flex justify-center items-center">
-      <AppLayout />
-    </div>
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route path="/recipes" element={<Recipes />} />
+      </Route>
+    </Routes>
   );
 }
