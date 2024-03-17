@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 
 export default function AppLayout() {
   return (
-    <div className="w-full bg-white h-full grid gap-2 grid-cols-layoutGridColumns grid-rows-layoutGridRows">
+    <div className="w-full bg-white h-full grid gap-2 grid-cols-layoutGridColumns grid-rows-layoutGridRows fixed">
       <Header />
       <Main>
         <Outlet />
