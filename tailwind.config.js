@@ -6,6 +6,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         layoutGridColumns: "50px 90px 1fr",
+        mainGrid: "repeat(3, 1fr)",
       },
       gridTemplateRows: {
         layoutGridRows: "70px 100dvh",
@@ -17,7 +18,7 @@ export default {
       },
       colors: {
         black: "#101101",
-        "black-2": "#5f5f5f",
+        "black-2": "#4f4f4f",
         grey: "#D9D9D7",
       },
       fontFamily: {
