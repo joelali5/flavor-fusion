@@ -6,7 +6,8 @@ export default {
     extend: {
       gridTemplateColumns: {
         layoutGridColumns: "50px 90px 1fr",
-        mainGrid: "repeat(3, 1fr)",
+        mainGridColumns: "repeat(2, 1fr)",
+        mainGridRows: "auto auto",
       },
       gridTemplateRows: {
         layoutGridRows: "70px 100dvh",
@@ -26,6 +27,9 @@ export default {
         rubik: "Rubik Glitch Pop, system-ui",
         charmonman: "Charmonman, cursive",
         girl: "The Girl Next Door, cursive",
+      },
+      boxShadow: {
+        "3xl": "0 35px 30px -7px rgba(0, 0, 0, 0.2)",
       },
     },
   },

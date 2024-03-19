@@ -18,11 +18,11 @@ function PopularRecipes() {
   if (isFetchingRecipes) return <Loader />;
 
   return (
-    <div className="mt-8">
-      <h1 className="text-sm sm:text-2xl font-kanit font-bold text-black-2 mb-3">
+    <div className="mt-8 sm:w-3/5 mx-auto">
+      <h1 className="text-xl sm:text-4xl font-kanit font-bold text-black-2 mb-6 sm:mb-10">
         Popular Recipes
       </h1>
-      <div className="sm:grid sm:grid-cols-mainGrid">
+      <div className="sm:grid sm:grid-cols-mainGridColumns grid-rows-mainGridRows gap-10">
         {popularRecipes.recipes.map((recipe) => (
           <Recipe recipe={recipe} key={recipe.id} />
         ))}
