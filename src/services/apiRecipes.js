@@ -11,3 +11,15 @@ export async function getPopularRecipes() {
 
   return data;
 }
+
+export async function getRecipes(query) {
+  const res = await fetch(
+    `${baseURL}/recipes/complexSearch?apiKey=${apiKey}&query=${query}&number=15`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch recipes.");
+
+  const data = await res.json();
+
+  return data;
+}

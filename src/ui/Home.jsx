@@ -1,6 +1,9 @@
+import { useRecipe } from "../contexts/RecipeProvider";
 import PopularRecipes from "../features/Recipes/PopularRecipes";
 
 function Home() {
+  const { searchedRecipes } = useRecipe();
+  console.log("Home: ", searchedRecipes);
   return (
     <div className="mx-4 relative h-3/4 sm:h-1/2">
       <div className="bg-food2 h-full bg-cover bg-center">

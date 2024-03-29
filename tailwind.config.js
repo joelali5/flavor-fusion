@@ -8,6 +8,7 @@ export default {
         layoutGridColumns: "50px 90px 1fr",
         mainGridColumns: "repeat(2, 1fr)",
         mainGridRows: "auto auto",
+        recipeGridColumns: "repeat(auto-fit, minmax(15rem, 1fr))",
       },
       gridTemplateRows: {
         layoutGridRows: "70px 100dvh",
@@ -16,6 +17,9 @@ export default {
         food: "url('/public/food.jpg')",
         food2: "url('/public/food2.jpg')",
         food3: "url('/public/food3.jpg')",
+      },
+      rotate: {
+        "45deg": "-45deg",
       },
       colors: {
         black: "#101101",
