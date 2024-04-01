@@ -23,3 +23,39 @@ export async function getRecipes(query) {
 
   return data;
 }
+
+export async function getIngredients(id) {
+  const res = await fetch(
+    `${baseURL}/recipes/${id}/ingredientWidget.json?apiKey=${apiKey}`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch ingredients.");
+
+  const data = await res.json();
+
+  return data;
+}
+
+export async function getRecipeInformation(id) {
+  const res = await fetch(
+    `${baseURL}/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch recipe information.");
+
+  const data = await res.json();
+
+  return data;
+}
+
+export async function getRecipeInstruction(id) {
+  const res = await fetch(
+    `${baseURL}/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch recipe instruction.");
+
+  const data = await res.json();
+
+  return data;
+}

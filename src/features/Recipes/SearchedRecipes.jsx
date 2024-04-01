@@ -1,65 +1,12 @@
 import { Link } from "react-router-dom";
 import { useRecipe } from "../../contexts/RecipeProvider";
 
-// const fakeRecipes = [
-//   {
-//     id: 1,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 2,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 3,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 4,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 5,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 6,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 7,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 8,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 9,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-//   {
-//     id: 10,
-//     image: "https://img.spoonacular.com/recipes/1733511-312x231.jpg",
-//     title: "Rice Cake",
-//   },
-// ];
-
 function SearchedRecipes() {
   const { searchedRecipes } = useRecipe();
   return (
     <ul className="grid grid-cols-recipeGridColumns">
       {searchedRecipes.map((recipe) => (
-        <Link>
+        <Link to={`/recipes/recipe/${recipe.id}`}>
           <li key={recipe.id} className="pr-4 mb-4 relative">
             <img
               src={recipe.image}

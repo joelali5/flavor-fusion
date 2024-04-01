@@ -15,10 +15,8 @@ function SearchBar() {
   async function handleSubmit(e) {
     e.preventDefault();
     setSearchedRecipes(recipes.results);
-    // navigate("/recipes");
+    navigate("/recipes");
   }
-
-  console.log("SearchBar: ", searchedRecipes);
 
   return (
     <form

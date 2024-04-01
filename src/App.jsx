@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import RecipeProvider from "./contexts/RecipeProvider";
 import SearchedRecipes from "./features/Recipes/SearchedRecipes";
+import RecipeDetails from "./features/Recipes/RecipeDetails";
 
 export default function App() {
   const queryClient = new QueryClient({
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/" element={<AppLayout />}>
             <Route path="/" index element={<Home />} />
             <Route path="/recipes" element={<SearchedRecipes />} />
+            <Route path="/recipes/recipe/:id" element={<RecipeDetails />} />
           </Route>
         </Routes>
         <ReactQueryDevtools initialIsOpen={false} />

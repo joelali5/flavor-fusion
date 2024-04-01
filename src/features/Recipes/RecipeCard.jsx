@@ -3,15 +3,18 @@ import { RxLapTimer } from "react-icons/rx";
 import { BiDish } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-function Recipe({ recipe }) {
+function RecipeCard({ recipe }) {
   const { title, healthScore, id, image, readyInMinutes, servings } = recipe;
   return (
-    <Link className="shadow-3xl mb-8 sm:mb-0 relative overflow-hidden rounded-tr-2xl rounded-tl-2xl">
+    <Link
+      to={`/recipes/recipe/${id}`}
+      className="shadow-3xl mb-8 sm:mb-0 relative overflow-hidden rounded-tr-2xl rounded-tl-2xl"
+    >
       <div className="rounded-tr-2xl rounded-tl-2xl">
         <img
           src={image}
           alt="recipe img"
-          className="max-w-full max-h-full object-cover transition-transform duration-500 transform hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-105 aspect-square"
         />
       </div>
       <div className="py-2 px-2 sm:py-4 sm:px-4 sm:h-[165px]">
@@ -37,4 +40,4 @@ function Recipe({ recipe }) {
   );
 }
 
-export default Recipe;
+export default RecipeCard;

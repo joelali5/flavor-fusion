@@ -2,7 +2,6 @@ import { useState } from "react";
 
 function Ingredient({ ingredientName }) {
   const [checked, setChecked] = useState(false);
-  console.log(checked);
 
   return (
     <label>

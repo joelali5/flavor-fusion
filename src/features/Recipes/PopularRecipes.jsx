@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getPopularRecipes } from "../../services/apiRecipes";
 import toast from "react-hot-toast";
 import Loader from "../../ui/Loader";
-import Recipe from "./Recipe";
+import RecipeCard from "./RecipeCard";
 
 function PopularRecipes() {
   const {
@@ -24,7 +24,7 @@ function PopularRecipes() {
       </h1>
       <div className="sm:grid sm:grid-cols-mainGridColumns grid-rows-mainGridRows gap-10">
         {popularRecipes.recipes?.map((recipe) => (
-          <Recipe recipe={recipe} key={recipe.id} />
+          <RecipeCard recipe={recipe} key={recipe.id} />
         ))}
       </div>
     </div>
