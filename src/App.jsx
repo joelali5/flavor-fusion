@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import RecipeProvider from "./contexts/RecipeProvider";
 import SearchedRecipes from "./features/Recipes/SearchedRecipes";
-import RecipeDetails from "./features/Recipes/RecipeDetails";
+import RecipeDetails from "./pages/RecipeDetails";
 
 export default function App() {
   const queryClient = new QueryClient({

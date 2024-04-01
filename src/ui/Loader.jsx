@@ -1,5 +1,9 @@
 function Loader() {
-  return <div>Loader...</div>;
+  return (
+    <div className="w-full flex justify-center items-center h-dvh">
+      <div className="spinner"></div>
+    </div>
+  );
 }
 
 export default Loader;
