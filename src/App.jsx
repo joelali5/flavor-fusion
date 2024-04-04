@@ -1,11 +1,11 @@
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
-import Home from "./ui/Home";
+import Home from "./pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import RecipeProvider from "./contexts/RecipeProvider";
-import SearchedRecipes from "./features/Recipes/SearchedRecipes";
+import SearchedRecipes from "./pages/SearchedRecipes";
 import RecipeDetails from "./pages/RecipeDetails";
 
 export default function App() {

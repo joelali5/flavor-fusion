@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRecipe } from "../../contexts/RecipeProvider";
+import { useRecipe } from "../contexts/RecipeProvider";
 
 function SearchedRecipes() {
   const { searchedRecipes } = useRecipe();
