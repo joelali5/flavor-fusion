@@ -1,8 +1,8 @@
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import RecipeProvider from "./contexts/RecipeProvider";
 import SearchedRecipes from "./features/Recipes/SearchedRecipes";
@@ -12,7 +12,7 @@ export default function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 120 * (60 * 1000),
+        staleTime: 250 * (60 * 1000),
       },
     },
   });

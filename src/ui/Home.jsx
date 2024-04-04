@@ -1,4 +1,3 @@
-import { useRecipe } from "../contexts/RecipeProvider";
 import PopularRecipes from "../features/Recipes/PopularRecipes";
 
 function Home() {

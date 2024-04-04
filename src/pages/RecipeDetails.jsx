@@ -3,6 +3,7 @@ import { useIngredients } from "../hooks/useIngredients";
 import { useRecipeInformation } from "../hooks/useRecipeInformation";
 import Error from "../ui/Error";
 import Loader from "../ui/Loader";
+import AddToFavoriteBtn from "../ui/AddToFavoriteBtn";
 
 function RecipeDetails() {
   const { id } = useParams();
@@ -29,19 +30,22 @@ function RecipeDetails() {
                     className="w-full"
                   />
                 </div>
-                <div className="w-full sm:w-1/2 self-end">
-                  <h2 className="text-sm sm:text-lg text-stone-600 font-kanit font-bold">
-                    {recipeInformation?.title}
-                  </h2>
-                  <p className="uppercase font-mono text-sm sm:text-lg text-stone-600">
-                    {recipeInformation?.dishTypes[0]}
-                  </p>
-                  <h2 className="text-sm sm:text-lg text-stone-900 font-bold">
-                    ${recipeInformation?.pricePerServing}
-                  </h2>
-                  <span className="text-sm tracking-wide sm:text-lg font-mono">
-                    {recipeInformation?.readyInMinutes} minutes
-                  </span>
+                <div className="flex w-full sm:w-1/2 justify-between items-center sm:block sm:ml-16">
+                  <div className="w-1/2 sm:mb-8">
+                    <h2 className="text-sm sm:text-lg text-stone-600 font-kanit font-bold">
+                      {recipeInformation?.title}
+                    </h2>
+                    <p className="uppercase font-mono text-sm sm:text-lg text-stone-600">
+                      {recipeInformation?.dishTypes[0]}
+                    </p>
+                    <h2 className="text-sm sm:text-lg text-stone-900 font-bold">
+                      ${recipeInformation?.pricePerServing}
+                    </h2>
+                    <span className="text-sm tracking-wide sm:text-lg font-mono">
+                      {recipeInformation?.readyInMinutes} minutes
+                    </span>
+                  </div>
+                  <AddToFavoriteBtn />
                 </div>
               </>
             )}
@@ -54,10 +58,10 @@ function RecipeDetails() {
                   Ingredients
                 </h2>
                 <ul className="flex flex-wrap list-disc list-inside items-center p-0">
-                  {ingredeients?.ingredients?.map((ingredient) => (
+                  {ingredeients?.ingredients?.map((ingredient, index) => (
                     <li
                       className="mr-4 text-stone-600 font-mono text-sm sm:text-lg p-0"
-                      key={ingredient.name}
+                      key={index}
                     >
                       {ingredient.name}
                     </li>
